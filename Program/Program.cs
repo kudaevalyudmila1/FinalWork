@@ -8,3 +8,23 @@
     }
     Console.Write("]");
 }
+string[] SortingArray(string[] arr1, int n)
+{
+    int count = 0;
+    for (int i = 0; i < arr1.Length; i++)
+    {
+        if (arr1[i].Length <= n) count++;
+        
+    }
+    int j = 0;
+    string[] arr2 = new string[count];
+    for (int i = 0; i < arr1.Length; i++)
+    {
+        if (arr1[i].Length <= n)
+        {
+            arr2[j] = arr1[i];
+            j++;
+        }
+    }
+    return arr2;
+}
